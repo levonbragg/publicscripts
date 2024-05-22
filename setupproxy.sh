@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+# This scipt works on Debian 12
 # Install Zabbix Proxy and edit the config for PSK
 #
 
