@@ -16,7 +16,8 @@ read -p "Enter the Zabbix Server IP/Name: " SERVER
 wget https://repo.zabbix.com/zabbix/6.4/debian/pool/main/z/zabbix-release/zabbix-release_6.4-1+debian12_all.deb
 dpkg -i zabbix-release_6.4-1+debian12_all.deb
 apt update
-apt install --reinstall -o Dpkg::Options::="--force-confask,confnew,confmiss" zabbix-proxy-sqlite3=1:6.4.14-1+debian12 -y
+# apt install --reinstall -o Dpkg::Options::="--force-confask,confnew,confmiss" zabbix-proxy-sqlite3=1:6.4.14-1+debian12 -y
+apt install zabbix-proxy-sqlite3=1:6.4.14-1+debian12 -y
 
 systemctl enable zabbix-proxy
 systemctl stop zabbix-proxy
