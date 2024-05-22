@@ -40,6 +40,9 @@ sed -i "s/# TLSConnect=unencrypted/TLSConnect=psk/" /etc/zabbix/zabbix_proxy.con
 sed -i "s/# TLSAccept=unencrypted/TLSAccept=psk/" /etc/zabbix/zabbix_proxy.conf
 sed -i "s/# TLSPSKFile=/TLSPSKFile=/home/zabbix/zabbix_proxy.psk/" /etc/zabbix/zabbix_proxy.conf
 sed -i "s/# TLSPSKIdentity=/TLSPSKIdentity=$PSK_IDENTITY/" /etc/zabbix/zabbix_proxy.conf
+sed -i "s/DBName=zabbix_proxy/DBName=/tmp/zabbix_proxy/" /etc/zabbix/zabbix_proxy.conf
+
+systemctl start zabbix-proxy
 
 echo $SERVER
 echo $IDENTITY
