@@ -44,7 +44,7 @@ sed -i "s/DBName=zabbix_proxy/DBName=/tmp/zabbix_proxy/" /etc/zabbix/zabbix_prox
 
 systemctl start zabbix-proxy
 
-echo $SERVER
-echo $IDENTITY
-echo $PSK_IDENTITY
-cat /etc/zabbix/zabbix_proxy.psk
+echo "Proxy name is: $IDENTITY"
+echo "Proxy Mode is: Active"
+echo "Proxy PSK identity is: $PSK_IDENTITY"
+echo "Proxy PSK is:" `cat /etc/zabbix/zabbix_proxy.psk`
